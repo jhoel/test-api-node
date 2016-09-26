@@ -1,0 +1,223 @@
+[33m[nodemon] 1.10.2[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching: *.*[39m
+[32m[nodemon] starting `node app.js`[39m
+Node server running on http://localhost:4000
+Connected to Database
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'aoeu' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'aoeu' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'aoeu' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'aoeuaoeu' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'eugenia2' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'Eugenia24' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'oeu' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'gg' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'gg' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'gg' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'gg' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'gg' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'uei' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'gg' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'iue' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'gg' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'thd' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'thd' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'gg' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'Eugenia2' }
+Correct
+{ _id: 57e53a16e886a27c30000004 }
+POST loggin user
+body: { username: 'iuei' }
+Correct
+null
+no usuario
+POST loggin user
+body: { username: 'dihid' }
+Correct
+null
+no usuario
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+Node server running on http://localhost:4000
+Connected to Database
+[32m[nodemon] restarting due to changes...[39m
+[32m[nodemon] starting `node app.js`[39m
+Node server running on http://localhost:4000
+Connected to Database

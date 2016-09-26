@@ -2,6 +2,7 @@ module.exports = function(app) {
 
   var User = require('../models/user.js');
   var Transference = require('../models/transference.js');
+  var cors = require('cors');
 
   findAllUsers = function(req, res) {
     User.find(function(err, users) {
@@ -26,7 +27,7 @@ module.exports = function(app) {
       lastname: req.body.lastname,
       cuentasDeb: ['B1', 'B2', 'B3'],
       cuentasCre: ['B2', 'B4', 'B6'],
-      imgURL: "http://10.18.1.64:3000/wallpaper.jpg"
+      imgURL: "http://localhost:3000/wallpaper.jpg"
     });
 
     user.save(function(err) {
@@ -50,11 +51,21 @@ module.exports = function(app) {
     });
   }
 
+
+
   logginUsername = function(req, res) {
     console.log('POST loggin user');
 
+
     var query = User.findOne({ 'username': req.body.username });
-    query.select('imgURL');
+    query.select('_id');
+    console.log("body:", req.body);
+
+    if (Object.keys(req.body).length == 0){
+      var ErrorResponse = {"code": "xx", "severidad": "grave", "text": "No body .."}; 
+      console.log("no body");
+      res.send(ErrorResponse);
+    }
 
     query.exec(function (err, imgURL) {
       if (!err){
