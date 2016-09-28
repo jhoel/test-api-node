@@ -2,7 +2,6 @@ module.exports = function(app) {
 
   var User = require('../models/user.js');
   var Transference = require('../models/transference.js');
-  var cors = require('cors');
 
   findAllUsers = function(req, res) {
     User.find(function(err, users) {
@@ -132,6 +131,30 @@ module.exports = function(app) {
     });
   }
 
+  fetchCreditAccounts = function (req, res) {
+    console.log('GET credit accounts ');
+    var query = User.findOne({ 'username': req.query.username });
+    query.select('cuentasCre');
+    query.exec(function (err, cuentas) {
+      if(!err) {
+        console.log(cuentas);
+        res.send(cuentas);    
+      }
+    });
+  }
+
+  fetchDebitAccounts = function (req, res) {
+    console.log('GET debit accounts');
+    var query = User.findOne({ 'username': req.query.username });
+    query.select('cuentasDeb');
+    query.exec(function (err, cuentas) {
+      if(!err) {
+        console.log(cuentas);
+        res.send(cuentas);    
+      }
+    });
+  }
+
   fetchMenuOptions = function (req, res) {
     console.log('GET menu info');
     var username = req.query.username;
@@ -206,5 +229,7 @@ module.exports = function(app) {
   app.get('/fetchUserInfo', fetchUserInfo);
   app.post('/transferenceStep1', transferenceStep1);
   app.post('/transferenceStep2', transferenceStep2);
+  app.get('/fetchCreditAccounts', fetchCreditAccounts);
+  app.get('/fetchDebitAccounts', fetchDebitAccounts);
 
 }
