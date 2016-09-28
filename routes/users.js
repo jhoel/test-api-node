@@ -36,8 +36,8 @@ module.exports = function(app) {
       password: req.body.password,
       firstname: req.body.firstname,
       lastname: req.body.lastname,
-      cuentasDeb: ['B1', 'B2', 'B3'],
-      cuentasCre: ['B2', 'B4', 'B6'],
+      creditAccounts: ['B1', 'B2', 'B3'],
+      debitAccounts: ['B2', 'B4', 'B6'],
       imgUrl: "http://10.18.1.96:4000/wallpaper.jpg",
       lastConnection:"Lunes 29 de Noviembre a las 13:24"
     });
@@ -149,7 +149,7 @@ module.exports = function(app) {
   fetchCreditAccounts = function (req, res) {
     console.log('GET credit accounts ');
     var query = User.findOne({ 'username': req.query.username });
-    query.select('cuentasCre');
+    query.select('creditAccounts');
     query.exec(function (err, cuentas) {
       if(!err) {
         console.log(cuentas);
@@ -161,7 +161,7 @@ module.exports = function(app) {
   fetchDebitAccounts = function (req, res) {
     console.log('GET debit accounts');
     var query = User.findOne({ 'username': req.query.username });
-    query.select('cuentasDeb');
+    query.select('debitAccounts');
     query.exec(function (err, cuentas) {
       if(!err) {
         console.log(cuentas);
