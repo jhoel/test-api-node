@@ -6,10 +6,11 @@ var UserSchema = new Schema({
 	password: 	{ type: String },
 	firstname: 	{ type: String },
 	lastname: 	{ type: String }, 
-	cuentasDeb: { type: [String] },
-	cuentasCre: { type: [String] },
 	lastConnection: {type: String},
-	imgUrl: {type:String} 
+	imgUrl: {type:String},
+	creditAccounts: { type: [String] },
+	debitAccounts: { type: [String] } 
+
 });
 
 module.exports = mongoose.model('User', UserSchema);
