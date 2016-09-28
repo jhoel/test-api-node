@@ -4,6 +4,18 @@ module.exports = function(app) {
   var Transference = require('../models/transference.js');
   var cors = require('cors');
 
+  
+  /*var whitelist = ['http://10.18.1.58:3000', 'http://10.18.1.64:$', 'http://10.18.1.96:$'];
+
+  var corsOptions = {
+  origin: function(origin, callback){
+    var originIsWhitelisted = whitelist.indexOf(origin) !== -1;
+    callback(originIsWhitelisted ? null : 'Bad Request cors', originIsWhitelisted);
+    }
+  };
+*/
+
+
   findAllUsers = function(req, res) {
     User.find(function(err, users) {
       if(!err) {
@@ -27,7 +39,8 @@ module.exports = function(app) {
       lastname: req.body.lastname,
       cuentasDeb: ['B1', 'B2', 'B3'],
       cuentasCre: ['B2', 'B4', 'B6'],
-      imgURL: "http://localhost:3000/wallpaper.jpg"
+      imgUrl: "http://10.18.1.96:4000/wallpaper.jpg",
+      lastConnection:"Lunes 29 de Noviembre a las 13:24"
     });
 
     user.save(function(err) {
@@ -93,7 +106,8 @@ module.exports = function(app) {
       /// Terminar transaccion
     }
 
-    var query = User.findOne({ 'username': req.body.username });
+    var query = User.findOne({ "username": req.body.username });
+    console.log("body+++++++++:", req.body);
     query.select('password');
 
     query.exec(function (err, result) {
@@ -101,13 +115,14 @@ module.exports = function(app) {
         console.log('Correct');
         console.log("pass: " + result.password);
         console.log("pass: " + req.body.password);
-
         if (req.body.password === result.password) {
+        //if (result.password) {
           console.log("loggin aceptado");
 
           // Definir ruta a seguir
           nextRoute = "transaction1"
           var _200Response = {"cod2": "200", "url": nextRoute}; 
+          //var _200Response = {"cod2": "200"}; 
           res.send(_200Response);
         } else {
           var ErrorResponse = {"cod2": "02", "severidad": "leve", "text": "Contraseña incorrecta"}; 
@@ -142,7 +157,7 @@ module.exports = function(app) {
   fetchUserInfo = function (req, res) {
     console.log('GET user info');
     var query = User.findOne({ 'username': req.query.username });
-    query.select('firstname lastname');
+    query.select('firstname lastname lastConnection');
     query.exec(function (err, userInfo) {
       if(!err) {
         console.log(userInfo);
