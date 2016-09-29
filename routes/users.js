@@ -190,46 +190,49 @@ module.exports = function(app) {
   }
 
   transferenceStep1 = function (req, res) {
-    console.log("validate ..");
-    res.send({"Status": "ok"});
+    console.log("validating ..");
+    res.send({"Status": "ok1"});
   }
 
   transferenceStep2 = function (req, res) {
     console.log("POST Token");
     console.log("validate..");
-    var token = req.body.token;
-    if (token === "") {
-      console.log("token vacio");
-      var ErrorResponse = {"cod2": "11", "severidad": "leve", "text": "Ingrese su codigo token"};  
-      res.send(ErrorResponse);
-      ///Terminar         
-    }
+    res.send({"Status": "ok2"});
+    
+    // var token = req.body.token;
+    // if (token === "") {
+    //   console.log("token vacio");
+    //   var ErrorResponse = {"cod2": "11", "severidad": "leve", "text": "Ingrese su codigo token"};  
+    //   res.send(ErrorResponse);
+    //   ///Terminar         
+    // }
 
-    //Consultar valor de token back
-    CURRENT_TOKEN_VALUE = "741"
-    if (token != CURRENT_TOKEN_VALUE) {
-      console.log("token incorrecto");
-      var ErrorResponse = {"cod2": "12", "severidad": "media", "text": `El codigo ${token} no corresponde a su token`};  
-      res.send(ErrorResponse);
-      ///Terminar
-    }
+    // //Consultar valor de token back
+    // CURRENT_TOKEN_VALUE = "741"
+    // if (token != CURRENT_TOKEN_VALUE) {
+    //   console.log("token incorrecto");
+    //   var ErrorResponse = {"cod2": "12", "severidad": "media", "text": `El codigo ${token} no corresponde a su token`};  
+    //   res.send(ErrorResponse);
+    //   ///Terminar
+    // }
 
-    // Create transference
-    var transference = new Transference({
-      accountFrom: req.body.accountFrom,
-      accountTo: req.body.accountTo,
-      importe: req.body.importe,
-      reference: req.body.reference,
-      username: req.body.username,
-    });
-    transference.save(function(err) {
-      if(!err) {
-        console.log('transference sucessfully created');
-        res.send(transference);
-      } else {
-        console.log('ERROR' + err);
-      }
-    });
+    // // Create transference
+    // var transference = new Transference({
+    //   accountFrom: req.body.accountFrom,
+    //   accountTo: req.body.accountTo,
+    //   importe: req.body.importe,
+    //   reference: req.body.reference,
+    //   username: req.body.username,
+    // });
+    // transference.save(function(err) {
+    //   if(!err) {
+    //     console.log('transference sucessfully created');
+    //     res.send({"Status": "ok2"});
+    //     res.send(transference);
+    //   } else {
+    //     console.log('ERROR' + err);
+    //   }
+    // });
 
   }
 
